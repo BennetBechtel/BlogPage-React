@@ -7,7 +7,7 @@ const Home = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5555/blogs")
+      .get("http://localhost:5555/api/blogs")
       .then((response) => {
         setBlogs(response.data.blogs);
       })
