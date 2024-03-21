@@ -1,7 +1,6 @@
 import "dotenv/config";
 import express from "express";
 import blogRoutes from "./routes/blogsRoute.js";
-import cors from "cors";
 import morgan from "morgan";
 import createHttpError, { isHttpError } from "http-errors";
 
@@ -10,9 +9,6 @@ const app = express();
 
 // Middleware for parsing request body
 app.use(express.json());
-
-// Middleware for handeling CORS POLICY
-app.use(cors());
 
 // Middleware for logging Traffic
 app.use(morgan("dev"));

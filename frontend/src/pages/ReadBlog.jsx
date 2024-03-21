@@ -10,7 +10,7 @@ const ReadBlog = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5555/api/blogs/${id}`)
+      .get(`/api/blogs/${id}`)
       .then((response) => {
         setBlog(response.data.blog);
       })

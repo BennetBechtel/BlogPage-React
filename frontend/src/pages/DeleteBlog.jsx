@@ -9,7 +9,7 @@ const DeleteBlog = () => {
 
   const handleDelete = () => {
     axios
-      .delete(`http://localhost:5555/api/blogs/${id}`)
+      .delete(`/api/blogs/${id}`)
       .then(() => navigate("/blogs"))
       .catch((error) => {
         alert("An error happened. Please try again");

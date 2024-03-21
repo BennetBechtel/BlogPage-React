@@ -12,7 +12,7 @@ const EditBlog = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5555/api/blogs/${id}`)
+      .get(`/api/blogs/${id}`)
       .then((response) => {
         const data = response.data.blog;
         setBlogTitle(data.title);
@@ -32,7 +32,7 @@ const EditBlog = () => {
       body: blogBody,
     };
     axios
-      .patch(`http://localhost:5555/api/blogs/${id}`, newBlog)
+      .patch(`/api/blogs/${id}`, newBlog)
       .then(() => {
         navigate(`/blogs/read/${id}`);
       })

@@ -15,7 +15,7 @@ const CreateBlog = () => {
       body: blogBody,
     };
     axios
-      .post("http://localhost:5555/api/blogs", newBlog)
+      .post("/api/blogs", newBlog)
       .then(() => {
         navigate("/blogs");
       })
